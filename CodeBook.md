@@ -2,23 +2,34 @@ Code Book
 =========================
 
 
-**Regarding "tidy data" requirements for variable names**: Please consider Community TA Trent Baur's clarification that we do NOT need to completely spell out words in variable names:
+**Regarding "tidy data" requirements for variable names**: Please consider Community TA Trent Baur's clarification 
+that we do NOT need to completely spell out words in variable names:
 https://class.coursera.org/getdata-007/forum/thread?thread_id=249#comment-829
 
     ...
-    Like naming conventions and coding standards, tidy data is rather subjective. There is no "specific" expectation in the grading process so as long as you describe/justify the changes you are making to the column names, you should receive full marks. The idea is to improve the column labels.
+    Like naming conventions and coding standards, tidy data is rather subjective. There is no "specific" 
+    expectation in the grading process so as long as you describe/justify the changes you are making to 
+    the column names, you should receive full marks. The idea is to improve the column labels.
     
-    Given it's subjective nature, my personal style would be to avoid excessively long column names. While changing t and f to Time and Frequency makes column names more more readable, it can cause some downstream issues when viewing the file in Excel or via head() because fewer columns will appear on the page. But I also hate cryptic abbreviations, so I see your motivation.
+    Given it's subjective nature, my personal style would be to avoid excessively long column names. While 
+    changing t and f to Time and Frequency makes column names more more readable, it can cause some downstream 
+    issues when viewing the file in Excel or via head() because fewer columns will appear on the page. But I 
+    also hate cryptic abbreviations, so I see your motivation.
     
-    I only bring all of this up to highlight how subjective and non-specific these choices can be. All you can do is decide on your rationale and explain it in your codebook.
+    I only bring all of this up to highlight how subjective and non-specific these choices can be. All you can 
+    do is decide on your rationale and explain it in your codebook.
 
-**Regarding which mean and standard deviation columns to import**:  Please also consider Community TA David Hood's clarification 
+**Regarding which mean and standard deviation columns to import**:  Please also consider Community TA David 
+Hood's clarification 
 https://class.coursera.org/getdata-007/forum/thread?thread_id=49#post-114
 from midway down his post:
     
     * what columns are measurements on the mean and standard deviation
     
-    Based on column names in the features is an open question as to is the the entries that include mean() and std() at the end, or does it include entries with mean in an earlier part of the name as well. There are no specific marking critieria on the number of columns. It is up to you to make a decision and explain what you did to the data. Make it easy for people to give you marks by explaining your reasoning.
+    Based on column names in the features is an open question as to is the the entries that include mean() 
+    and std() at the end, or does it include entries with mean in an earlier part of the name as well. There 
+    are no specific marking critieria on the number of columns. It is up to you to make a decision and explain 
+    what you did to the data. Make it easy for people to give you marks by explaining your reasoning.
 
 Variables and Summaries
 -------------------------
@@ -49,12 +60,14 @@ Field Renaming Rules
 
 *The prifix "f " in the original field names was replaced with prefix "Freq" as short for Frequency.
 
-*NOTE: See last section "Complete list of renamed fields" for exact translation of names for numeric columns from original.
+*NOTE: See last section "Complete list of renamed fields" for exact translation of names for numeric columns 
+from original.
 
 ### Columns in output file "avg_by_activity.txt"
 
 
-NOTE: After running run_analysis.R, the output file "avg_by_activity.txt"" may be read back into R if required using read.table, for example:
+NOTE: After running run_analysis.R, the output file "avg_by_activity.txt"" may be read back into R if required 
+using read.table, for example:
 
 > avg_by_act <- read.table("avg_by_activity.txt")
 
@@ -67,7 +80,8 @@ Columns in the "avg_by_activity.txt" file are as follows
     * WALKING_DOWNSTAIRS
     * WALKING_UPSTAIRS
 
-...emaining columns (column positions 2-80) in "avg_by_activity.txt" were renamed from the original source as follows:
+...emaining columns (column positions 2-80) in "avg_by_activity.txt" were renamed from the original source as 
+follows:
 
 * "tBodyAcc-mean()-X" was renamed to:    TimeAccMeanX
 * "tBodyAcc-mean()-Y" was renamed to:	TimeAccMeanY
